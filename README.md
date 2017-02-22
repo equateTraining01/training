@@ -1,2 +1,2 @@
 # training
-Test for training
+Test for training equate ux410
