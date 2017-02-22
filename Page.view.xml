@@ -1,0 +1,138 @@
+<mvc:View
+	height="100%"
+	controllerName="sap.m.sample.ComboBox.Page"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.suite.ui.commons"
+	xmlns:r="sap.suite.ui.microchart">
+	<Page showHeader="false">
+		<content>
+			<ComboBox
+				items="{
+					path: '/Results',
+					sorter: { path: 'Name' }
+				}">
+				<core:Item key="{ProductId}" text="{Name}" />
+			</ComboBox>
+			 <List id="test-list"></List>		
+		</content>
+		<c:HeaderContainer scrollStep="200" scrollTime="500" backgroundDesign="Solid" showDividers="true">
+			<c:items>
+				<c:HeaderCell>
+					<c:north>
+						<c:HeaderCellItem height="90%">
+						<c:content>
+							<c:NumericContent size="S" scale="M" value="1.96" valueColor="Error" indicator="Up" press="press"/>
+						</c:content>						
+						</c:HeaderCellItem>	
+					</c:north>
+					<c:south>
+					<c:HeaderCellItem height="10%">
+						<c:content>
+							<Label text="EUR, Current Quarter" />
+						</c:content>
+					</c:HeaderCellItem>
+				</c:south>
+				</c:HeaderCell>	
+			</c:items>	
+		<!--</c:HeaderContainer>-->
+		<!--<c:HeaderContainer scrollStep="200" scrollTime="500" backgroundDesign="Solid" showDividers="true">-->
+			<c:items>
+				<c:HeaderCell>
+					<c:north>
+						<c:HeaderCellItem height="90%">
+						<c:content>
+							<c:NumericContent size="S" scale="M" value="2.96" valueColor="Good" indicator="Up" press="press"/>
+						</c:content>						
+						</c:HeaderCellItem>	
+					</c:north>
+					<c:south>
+					<c:HeaderCellItem height="10%">
+						<c:content>
+							<Label text="EUR, Last Quarter" />
+						</c:content>
+					</c:HeaderCellItem>
+				</c:south>
+				</c:HeaderCell>	
+			</c:items>	
+		</c:HeaderContainer>
+		<c:HeaderContainer scrollStep="200" scrollTime="500" backgroundDesign="Solid" showDividers="true" >
+			<c:items>
+				<c:HeaderCell>
+					<c:north>
+						<c:HeaderCellItem height="90%">
+						<c:content>
+							<!--<c:NumericContent size="S" scale="M" value="2.26" valueColor="Critical" indicator="Up" press="press"/>-->
+							<FlexBox width="70px" height="70px" alignItems="Top" >
+							<r:RadialMicroChart percentage="45" press="press"></r:RadialMicroChart>
+							</FlexBox>
+						</c:content>						
+						</c:HeaderCellItem>	
+					</c:north>
+					<c:south>
+					<c:HeaderCellItem height="10%">
+						<c:content>
+							<Label text="EUR, first Quarter" />
+						</c:content>
+					</c:HeaderCellItem>
+				</c:south>
+				</c:HeaderCell>	
+			</c:items>	
+		<!--</c:HeaderContainer>	-->
+		<!--<c:HeaderContainer scrollStep="200" scrollTime="500" backgroundDesign="Solid" showDividers="true">-->
+			<c:items>
+				<c:HeaderCell>
+					<c:north>
+						<c:HeaderCellItem height="90%">
+						<c:content>
+							<c:BulletChart size="S" scale="M" targetValue="75" targetValueLabel="75c" minValue="0" maxValue="150" press="press">
+								<c:actual>
+									<c:BulletChartData value="125" color="Error"/>
+								</c:actual>
+								<c:thresholds>
+									<c:BulletChartData value="35" color="Critical"/>
+									<c:BulletChartData value="115" color="Error"/>
+								</c:thresholds>
+							</c:BulletChart> 							
+						</c:content>						
+						</c:HeaderCellItem>	
+					</c:north>
+					<c:south>
+					<c:HeaderCellItem height="10%">
+						<c:content>
+							<Label text="EUR, Second Quarter" />
+						</c:content>
+					</c:HeaderCellItem>
+				</c:south>
+				</c:HeaderCell>	
+			</c:items>	
+		</c:HeaderContainer>		
+	<!--<c:HeaderContainer scrollStep="200" scrollTime="500">-->
+	<!--	<c:items>-->
+	<!--		<c:HeaderCell>-->
+	<!--			<c:north>-->
+	<!--				<c:HeaderCellItem height="90%">-->
+	<!--					<content>-->
+	<!--						<c:ComparisonChart size="S" scale="M" press="press">-->
+	<!--					        <c:data>-->
+	<!--					        	<c:ComparisonData	title="Americas" value="234" color="Good"/>-->
+	<!--					        	<c:ComparisonData	title="EMEA" value="97" color="Error"/>-->
+	<!--					        	<c:ComparisonData	title="APAC" value="197" color="Critical"/>-->
+	<!--					        </c:data>-->
+	<!--				        </c:ComparisonChart>-->
+	<!--					</content>-->
+	<!--				</c:HeaderCellItem>-->
+	<!--			</c:north>-->
+	<!--			<c:south>-->
+	<!--				<c:HeaderCellItem height="10%">-->
+	<!--					<content>-->
+	<!--						<Label text="EUR, Compare across regions" />-->
+	<!--					</content>-->
+	<!--				</c:HeaderCellItem>-->
+	<!--			</c:south>-->
+	<!--		</c:HeaderCell>-->
+	<!--	</c:items>-->
+	<!--</c:HeaderContainer>-->
+	</Page>
+</mvc:View>
